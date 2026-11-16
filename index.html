@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BMI Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="card">
+    <h1>⚖️ BMI Calculator</h1>
+    <div class="units">
+      <button id="unit-metric" class="unit active">Metric (kg, cm)</button>
+      <button id="unit-imperial" class="unit">Imperial (lb, in)</button>
+    </div>
+    <form id="form">
+      <label>Weight (<span id="weight-unit">kg</span>)
+        <input id="weight" type="number" min="1" step="any" placeholder="e.g. 70" required>
+      </label>
+      <label>Height (<span id="height-unit">cm</span>)
+        <input id="height" type="number" min="1" step="any" placeholder="e.g. 175" required>
+      </label>
+      <button type="submit" class="primary">Calculate BMI</button>
+    </form>
+    <div id="result" class="result" hidden>
+      <p class="bmi">Your BMI: <strong id="bmi-value"></strong></p>
+      <p id="bmi-category"></p>
+      <div class="scale">
+        <span class="under">Underweight<br>&lt; 18.5</span>
+        <span class="normal">Normal<br>18.5 – 24.9</span>
+        <span class="over">Overweight<br>25 – 29.9</span>
+        <span class="obese">Obese<br>30+</span>
+      </div>
+    </div>
+    <p class="note">BMI is a rough screening measure — it doesn't account for muscle mass, age or health conditions. Talk to a clinician for personal advice.</p>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
